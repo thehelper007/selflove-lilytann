@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Любовь к себе — 7-дневный интенсив</title>
+  <meta name="description" content="Интенсив «Любовь к себе» с Лилией Танн и Ксенией. 26 апреля — 2 мая. 7 дней практик, подкастов и поддержки в Telegram.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #f7f3ee;
+      --bg-warm: #efe9e0;
+      --bg-card: #ffffff;
+      --text: #3d3831;
+      --text-light: #6b645a;
+      --text-muted: #9a9389;
+      --accent: #c4956a;
+      --accent-dark: #a87c55;
+      --border: #e8e2d9;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px;
+      background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 30% 20%, rgba(196, 149, 106, 0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 80%, rgba(196, 149, 106, 0.06) 0%, transparent 60%);
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero-label {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 32px;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(3rem, 10vw, 5.5rem);
+      line-height: 1.05;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .hero-dates {
+      font-family: var(--sans);
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--text-light);
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .hero-sub {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin: 0 auto 48px;
+      line-height: 1.8;
+    }
+
+    /* ===== CTA BUTTON ===== */
+    .cta {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--bg-card);
+      background: var(--accent);
+      padding: 18px 48px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .cta:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196, 149, 106, 0.3);
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 100px 24px;
+    }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 40px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      background: var(--bg-warm);
+    }
+
+    .about-text {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.9;
+      color: var(--text-light);
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-top: 56px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-feature {
+      text-align: center;
+    }
+
+    .about-feature-num {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .about-feature-label {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== FOR WHOM ===== */
+    .for-whom {
+      background: var(--bg);
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .pain-item {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pain-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+    }
+
+    .pain-item p {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--text-light);
+    }
+
+    .pain-item p strong {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .cta-center {
+      text-align: center;
+      margin-top: 56px;
+    }
+
+    /* ===== PROGRAM ===== */
+    .program {
+      background: var(--bg-warm);
+    }
+
+    .program-list {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .program-day {
+      display: flex;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+
+    .program-day:last-child { border-bottom: none; }
+
+    .day-num {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--accent);
+      min-width: 48px;
+      line-height: 1.2;
+    }
+
+    .day-content h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .day-host {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .day-desc {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== HOSTS ===== */
+    .hosts {
+      background: var(--bg);
+    }
+
+    .hosts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .host-card {
+      text-align: center;
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 48px 32px 40px;
+      border: 1px solid var(--border);
+    }
+
+    .host-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--bg-warm);
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .host-card h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .host-card .host-handle {
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .host-card p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      background: var(--bg-warm);
+      text-align: center;
+      padding: 100px 24px;
+    }
+
+    .final-cta h2 {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 20px;
+    }
+
+    .final-cta p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: var(--bg);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      section { padding: 72px 20px; }
+      .hero { padding: 60px 20px; }
+      .pain-item { padding: 24px; }
+      .program-day { gap: 16px; }
+      .host-card { padding: 36px 24px 32px; }
+      .cta { padding: 16px 36px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-label">7-дневный интенсив в Telegram</p>
+      <h1>Любовь<br><em>к себе</em></h1>
+      <p class="hero-dates">26 апреля — 2 мая</p>
+      <p class="hero-sub">Неделя практик, подкастов и честного диалога с собой. Два психолога. Одно безопасное пространство. Твой путь к себе.</p>
+      <a href="#" class="cta" id="cta-hero">Записаться</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container">
+      <div class="about-text fade-in">
+        <p class="section-label">О чём интенсив</p>
+        <h2>Расти не потому что с тобой что-то не так, а потому что ты себе ценна</h2>
+        <p>Это неделя, в которой ты встретишься с собой настоящей. Без масок, без ожиданий, без попыток стать «лучшей версией». Каждый день — подкаст, практическое задание и поддержка в кругу девушек, которые идут тем же путём. В первый и последний день — живые созвоны с нами.</p>
+      </div>
+      <div class="about-features fade-in">
+        <div class="about-feature">
+          <div class="about-feature-num">7</div>
+          <div class="about-feature-label">дней практик</div>
+        </div>
+        <div class="about-feature">
+          <div class="about-feature-num">2</div>
+          <div class="about-feature-label">живых созвона</div>
+        </div>
+        <div class="about-feature">
+          <div class="about-feature-num">7</div>
+          <div class="about-feature-label">подкастов</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR WHOM -->
+  <section class="for-whom">
+    <div class="container">
+      <div class="fade-in" style="text-align: center; margin-bottom: 48px;">
+        <p class="section-label">Для кого</p>
+        <h2>Если ты узнаёшь себя<br>хотя бы в одном</h2>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-item fade-in">
+          <p><strong>Ты устала, но не можешь остановиться.</strong> Чувствуешь выгорание, но отдых вызывает тревогу — как будто нужно ещё чуть-чуть заслужить право расслабиться.</p>
+        </div>
+        <div class="pain-item fade-in">
+          <p><strong>Сравниваешь себя с другими — и проигрываешь.</strong> Чужой успех напоминает: «я отстаю». Даже вдохновение быстро превращается в самообесценивание.</p>
+        </div>
+        <div class="pain-item fade-in">
+          <p><strong>Настроение зависит от чужой оценки.</strong> Если не написали, не выбрали, не похвалили — значит «со мной что-то не так». Сложно быть устойчивой без подтверждения извне.</p>
+        </div>
+        <div class="pain-item fade-in">
+          <p><strong>Чувствуешь вину за свои желания.</strong> Хотеть больше денег, любви, внимания — «слишком». Удовольствие нужно оправдать, а потребности — обосновать.</p>
+        </div>
+        <div class="pain-item fade-in">
+          <p><strong>Терпишь в отношениях больше, чем подходит.</strong> Боишься быть «сложной» или «неудобной». Путаешь любовь с тревогой и ожиданием.</p>
+        </div>
+        <div class="pain-item fade-in">
+          <p><strong>Занижаешь свою ценность.</strong> В работе, в отношениях, в теле. Долго «готовишься», но не решаешься заявить о себе. Ощущение: «я ещё не готова».</p>
+        </div>
+        <div class="pain-item fade-in">
+          <p><strong>Тело стало объектом контроля, а не домом.</strong> Напряжение, недовольство, забота из позиции «исправить» вместо «поддержать».</p>
+        </div>
+      </div>
+      <div class="cta-center fade-in">
+        <a href="#" class="cta" id="cta-middle">Записаться на интенсив</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section class="program">
+    <div class="container">
+      <div class="fade-in" style="text-align: center; margin-bottom: 48px;">
+        <p class="section-label">Программа</p>
+        <h2>7 дней к себе</h2>
+      </div>
+      <div class="program-list">
+        <div class="program-day fade-in">
+          <div class="day-num">01</div>
+          <div class="day-content">
+            <p class="day-host">Ксения</p>
+            <h3>Контакт с собой и с реальностью</h3>
+            <p class="day-desc">Принятие себя. Знакомство с реальной собой, а не с ожиданиями о себе. Общий созвон-открытие.</p>
+          </div>
+        </div>
+        <div class="program-day fade-in">
+          <div class="day-num">02</div>
+          <div class="day-content">
+            <p class="day-host">Лиля</p>
+            <h3>Безопасность с собой</h3>
+            <p class="day-desc">Любовь к себе через внутреннюю безопасность. Работа с внутренним критиком. Как создавать опору внутри.</p>
+          </div>
+        </div>
+        <div class="program-day fade-in">
+          <div class="day-num">03</div>
+          <div class="day-content">
+            <p class="day-host">Ксения</p>
+            <h3>Внутренний диалог с собой</h3>
+            <p class="day-desc">Как ты говоришь с собой? Практика осознанного внутреннего диалога.</p>
+          </div>
+        </div>
+        <div class="program-day fade-in">
+          <div class="day-num">04</div>
+          <div class="day-content">
+            <p class="day-host">Лиля</p>
+            <h3>Забота о себе и самоподдержка</h3>
+            <p class="day-desc">Ответственность за своё состояние. Забота не из долга, а из любви.</p>
+          </div>
+        </div>
+        <div class="program-day fade-in">
+          <div class="day-num">05</div>
+          <div class="day-content">
+            <p class="day-host">Ксения</p>
+            <h3>Быть неудобной, но быть собой</h3>
+            <p class="day-desc">Границы. Умение говорить «нет». Право на свои потребности.</p>
+          </div>
+        </div>
+        <div class="program-day fade-in">
+          <div class="day-num">06</div>
+          <div class="day-content">
+            <p class="day-host">Лиля</p>
+            <h3>Позволение хотеть</h3>
+            <p class="day-desc">Разрешение себе желать. Без вины, без оправданий.</p>
+          </div>
+        </div>
+        <div class="program-day fade-in">
+          <div class="day-num">07</div>
+          <div class="day-content">
+            <p class="day-host">Лиля и Ксения</p>
+            <h3>Интеграция и закрытие</h3>
+            <p class="day-desc">Общий созвон. Собираем всё вместе. Твоя новая точка опоры.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOSTS -->
+  <section class="hosts">
+    <div class="container">
+      <div class="fade-in" style="text-align: center; margin-bottom: 48px;">
+        <p class="section-label">Ведущие</p>
+        <h2>Кто ведёт интенсив</h2>
+      </div>
+      <div class="hosts-grid">
+        <div class="host-card fade-in">
+          <div class="host-avatar">Л</div>
+          <h3>Лилия Танн</h3>
+          <span class="host-handle">@liliya.tann</span>
+          <p>Практикующий психолог. 1 350+ консультаций, 125+ клиентов. Гештальт-подход, работа с тенью, эмоциональное распознавание. Создаёт безопасное пространство для встречи с собой.</p>
+        </div>
+        <div class="host-card fade-in">
+          <div class="host-avatar">К</div>
+          <h3>Ксения</h3>
+          <span class="host-handle">@yo.ksyu</span>
+          <p>Практик личностного развития. Работает с контактом с реальностью, внутренним диалогом и границами. Помогает женщинам выходить из роли «удобной» и возвращаться к себе.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container fade-in">
+      <h2>Начни неделю<br><em>с себя</em></h2>
+      <p>26 апреля — 2 мая. Безопасное пространство, ежедневные практики и поддержка. Твой первый шаг — здесь.</p>
+      <a href="#" class="cta" id="cta-final">Записаться на интенсив</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Любовь к себе. Лилия Танн & Ксения.</p>
+  </footer>
+
+  <script>
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // CTA click handler (placeholder — will connect to Telegram)
+    document.querySelectorAll('.cta').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // TODO: Replace with Telegram link
+        alert('Ссылка на Telegram будет подключена');
+      });
+    });
+  </script>
+
+</body>
+</html>
