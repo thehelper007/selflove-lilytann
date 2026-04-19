@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Любовь к себе — 7-дневный интенсив</title>
-  <meta name="description" content="Интенсив «Любовь к себе» с Лилией Танн и Ксенией. 26 апреля — 2 мая. 7 дней практик, подкастов и поддержки в Telegram.">
+  <meta name="description" content="Интенсив «Любовь к себе» с Лилией Танн и Ксенией. 1 — 8 мая. Неделя практик, подкастов и поддержки в Telegram.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -182,10 +182,11 @@
     .hero h1 {
       font-family: var(--serif);
       font-weight: 300;
-      font-size: clamp(3.5rem, 7vw, 6rem);
-      line-height: 0.95;
+      font-size: clamp(4.5rem, 9vw, 8rem);
+      line-height: 0.92;
       color: var(--text);
-      margin-bottom: 12px;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
     }
 
     .hero h1 em {
@@ -432,6 +433,21 @@
       font-weight: 300;
       color: var(--text-mid);
       line-height: 1.7;
+    }
+
+    .forwhom-cta {
+      margin-top: 64px;
+      text-align: center;
+      position: relative;
+    }
+
+    .forwhom-cta::before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--line);
+      margin: 0 auto 40px;
     }
 
     .bento-cta-card {
@@ -694,6 +710,11 @@
       font-weight: 300;
       color: var(--text-mid);
       line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .host-bio:last-child {
+      margin-bottom: 0;
     }
 
     /* ===== FINAL CTA ===== */
@@ -866,8 +887,8 @@
     <div class="hero-left">
       <p class="label" style="margin-bottom: 32px;">7-дневный интенсив в Telegram</p>
       <h1>Любовь<em>к себе</em></h1>
-      <div class="hero-dates">26 апреля — 2 мая</div>
-      <p class="hero-sub">Неделя практик, подкастов и честного диалога с собой. Два психолога. Одно безопасное пространство.</p>
+      <div class="hero-dates">1 — 8 мая</div>
+      <p class="hero-sub">Неделя практик, подкастов и честного диалога с собой. Магистр психологии и сертифицированный коуч для эффективной интеграции твоих изменений. Одно безопасное пространство.</p>
       <a href="#" class="cta">Записаться</a>
       <div class="hero-meta">
         <div class="hero-meta-item">
@@ -907,7 +928,6 @@
       <h2>Расти не потому что с тобой что-то <em>не так</em></h2>
     </div>
     <div class="about-right">
-      <p>Это неделя, в которой ты встретишься с собой настоящей. Без масок, без ожиданий, без попыток стать «лучшей версией».</p>
       <p>Каждый день — подкаст, практическое задание и поддержка в кругу девушек, которые идут тем же путём. В первый и последний день — живые созвоны с нами.</p>
       <div class="about-format">
         <div class="about-format-item">
@@ -955,7 +975,7 @@
         <div class="bento-text" style="margin-top: 32px; font-style: italic; color: var(--accent);">Сложно быть устойчивой без подтверждения извне.</div>
       </div>
 
-      <div class="bento-card bg-card">
+      <div class="bento-card bg-card span-2">
         <div class="bento-title">Сравниваешь себя с другими</div>
         <div class="bento-text">Чужой успех напоминает: «я отстаю». Даже вдохновение быстро превращается в самообесценивание.</div>
       </div>
@@ -974,12 +994,10 @@
         <div class="bento-title">Занижаешь свою ценность</div>
         <div class="bento-text">В работе, в отношениях, в теле. Долго «готовишься», но не решаешься заявить о себе.</div>
       </div>
+    </div>
 
-      <div class="bento-card bg-accent bento-cta-card span-2">
-        <div class="bento-title">Тело стало объектом контроля, а не домом</div>
-        <div class="bento-text">Напряжение, недовольство, забота из позиции «исправить» вместо «поддержать».</div>
-        <a href="#" class="cta" style="margin-top: 32px; background: #fff; color: var(--accent-dark);">Записаться на интенсив</a>
-      </div>
+    <div class="forwhom-cta">
+      <a href="#" class="cta">Записаться на интенсив</a>
     </div>
   </section>
 
@@ -1075,7 +1093,9 @@
         <div class="host-avatar"><img src="images/liliya.jpg" alt="Лилия Танн" loading="lazy"></div>
         <div class="host-name">Лилия Танн</div>
         <div class="host-handle">@liliya.tann</div>
-        <p class="host-bio">Практикующий психолог. 1 350+ консультаций, 125+ клиентов. Гештальт-подход, работа с тенью, эмоциональное распознавание. Создаёт безопасное пространство для встречи с собой.</p>
+        <p class="host-bio">Магистр психологии, практикующий психолог в интегративном подходе. 1 350+ консультаций, 125+ клиентов.</p>
+        <p class="host-bio">В работе соединяет научную базу с лучшими интегративными методами — терапией подсознательного, метакогнитивным программированием, эмоциональным процессингом, гештальт-подходом и юнгианскими архетипами.</p>
+        <p class="host-bio">Помогает женщинам выйти из внутренней критики и тревоги — и прийти к устойчивой опоре на себя.</p>
       </div>
 
       <div class="hosts-separator">
@@ -1088,7 +1108,7 @@
         <div class="host-avatar"><img src="images/ksenia.jpg" alt="Ксения" style="object-position: center 15%;" loading="lazy"></div>
         <div class="host-name">Ксения</div>
         <div class="host-handle">@yo.ksyu</div>
-        <p class="host-bio">Практик личностного развития. Работает с контактом с реальностью, внутренним диалогом и границами. Помогает женщинам выходить из роли «удобной» и возвращаться к себе.</p>
+        <p class="host-bio">Практик личностного развития. Сертифицированный коуч и ведущая игры Лила чакра. Работает с контактом с реальностью, внутренним диалогом и границами. Помогает женщинам выходить из роли «удобной» и возвращаться к себе.</p>
       </div>
     </div>
   </section>
@@ -1096,7 +1116,7 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <h2>Начни неделю<br><em>с себя</em></h2>
-    <p>26 апреля — 2 мая. Безопасное пространство, ежедневные практики и поддержка. Твой первый шаг — здесь.</p>
+    <p>1 — 8 мая. Безопасное пространство, ежедневные практики и поддержка. Твой первый шаг — здесь.</p>
     <a href="#" class="cta">Записаться на интенсив</a>
   </section>
 
