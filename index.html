@@ -629,19 +629,27 @@
     }
 
     .host-avatar {
-      width: 120px;
-      height: 120px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--bg-alt), var(--bg-dark));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--serif);
-      font-size: 2.5rem;
-      font-weight: 300;
-      color: var(--accent);
-      margin-bottom: 28px;
+      overflow: hidden;
+      margin-bottom: 36px;
       position: relative;
+      background: var(--bg-alt);
+    }
+
+    .host-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(15%) contrast(1.02);
+      transition: filter 0.6s ease, transform 0.6s ease;
+    }
+
+    .host-card:hover .host-avatar img {
+      filter: grayscale(0%) contrast(1.05);
+      transform: scale(1.03);
     }
 
     .host-card:first-child .host-avatar {
@@ -651,9 +659,21 @@
     .host-avatar::before {
       content: '';
       position: absolute;
-      inset: -8px;
+      inset: -10px;
       border-radius: 50%;
       border: 1px solid var(--line);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .host-avatar::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      box-shadow: inset 0 0 40px rgba(0,0,0,0.08);
+      pointer-events: none;
+      z-index: 1;
     }
 
     .host-name {
@@ -1052,7 +1072,7 @@
 
     <div class="hosts-grid">
       <div class="host-card">
-        <div class="host-avatar">Л</div>
+        <div class="host-avatar"><img src="images/liliya.jpg" alt="Лилия Танн" loading="lazy"></div>
         <div class="host-name">Лилия Танн</div>
         <div class="host-handle">@liliya.tann</div>
         <p class="host-bio">Практикующий психолог. 1 350+ консультаций, 125+ клиентов. Гештальт-подход, работа с тенью, эмоциональное распознавание. Создаёт безопасное пространство для встречи с собой.</p>
@@ -1065,7 +1085,7 @@
       </div>
 
       <div class="host-card">
-        <div class="host-avatar">К</div>
+        <div class="host-avatar"><img src="images/ksenia.jpg" alt="Ксения" style="object-position: center 15%;" loading="lazy"></div>
         <div class="host-name">Ксения</div>
         <div class="host-handle">@yo.ksyu</div>
         <p class="host-bio">Практик личностного развития. Работает с контактом с реальностью, внутренним диалогом и границами. Помогает женщинам выходить из роли «удобной» и возвращаться к себе.</p>
