@@ -974,11 +974,11 @@
       font-family: var(--serif);
       color: var(--burgundy);
       line-height: 1;
-      margin-bottom: 12px;
+      margin-bottom: 0;
       display: flex;
       align-items: baseline;
       justify-content: center;
-      gap: 10px;
+      gap: 6px;
     }
 
     .pricing-card--featured .pricing-price { color: var(--text-on-dark); }
@@ -989,15 +989,15 @@
     }
 
     .pricing-currency {
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--text-mid);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--accent-dark);
+      line-height: 1;
     }
 
-    .pricing-card--featured .pricing-currency { color: var(--text-on-dark-mid); }
+    .pricing-card--featured .pricing-currency { color: var(--accent); }
 
     .pricing-alt {
       font-family: var(--serif);
@@ -1466,10 +1466,9 @@
         <div class="pricing-sub">Ранняя птичка</div>
         <div class="pricing-divider"></div>
         <div class="pricing-price">
-          <span class="pricing-amount">1 777</span>
-          <span class="pricing-currency">грн</span>
+          <span class="pricing-currency">$</span>
+          <span class="pricing-amount">40</span>
         </div>
-        <p class="pricing-alt">≈ $40</p>
       </div>
 
       <div class="pricing-card">
@@ -1477,10 +1476,9 @@
         <div class="pricing-sub">Основной тариф</div>
         <div class="pricing-divider"></div>
         <div class="pricing-price">
-          <span class="pricing-amount">2 222</span>
-          <span class="pricing-currency">грн</span>
+          <span class="pricing-currency">$</span>
+          <span class="pricing-amount">50</span>
         </div>
-        <p class="pricing-alt">≈ $50</p>
       </div>
     </div>
 
