@@ -855,6 +855,68 @@
       margin-bottom: 0;
     }
 
+    /* ===== REVIEWS ===== */
+    .reviews {
+      padding: 120px 80px;
+      background: var(--bg-alt);
+      overflow: hidden;
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .reviews-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.1;
+    }
+
+    .reviews-header h2 em {
+      font-style: italic;
+      color: var(--burgundy);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background: var(--bg-card);
+      padding: 36px;
+      border-top: 2px solid var(--accent);
+    }
+
+    .review-stars {
+      color: var(--accent);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .review-text {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--text-mid);
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+
+    .review-name {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
     /* ===== PRICING ===== */
     .pricing {
       background: var(--bg);
@@ -1197,6 +1259,9 @@
 
       .hosts-separator { display: none; }
 
+      .reviews { padding: 80px 24px; }
+      .reviews-grid { grid-template-columns: 1fr; gap: 16px; }
+
       .pricing { padding: 80px 32px; }
       .pricing-grid {
         grid-template-columns: 1fr;
@@ -1446,6 +1511,53 @@
         <div class="host-name">Ксения</div>
         <div class="host-handle">@yo.ksyu</div>
         <p class="host-bio">Практик личностного развития. Сертифицированный коуч и ведущая игры Лила чакра. Работает с контактом с реальностью, внутренним диалогом и границами. Помогает женщинам выходить из роли «удобной» и возвращаться к себе.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <div class="reviews-header">
+      <div class="section-line" style="margin: 0 auto 20px;"></div>
+      <p class="label" style="margin-bottom: 24px;">Отзывы</p>
+      <h2>Клиенты о работе <em>с Лилией</em></h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">«Мне доводилось работать со многими психологами, но Лиля — самая лучшая. Она не просто выслушивает, а действительно понимает, мягко направляя в нужное русло. После каждой встречи — ощущение ясности и уверенности в своих силах.»</p>
+        <div class="review-name">Лейла К.</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">«Это мой первый опыт работы с психологом, и он оказался просто потрясающим! С самой первой сессии мне было максимально комфортно. Благодарю Лилию за чуткость и невероятную поддержку.»</p>
+        <div class="review-name">Инна Н.</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">«З найпершої сесії я відчула, що перебуваю в надійних руках. Лілія тонко відчуває мій стан, розуміє навіть те, що я не встигаю озвучити. Кожна зустріч приносить полегшення і усвідомлення себе.»</p>
+        <div class="review-name">Marie H.</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">«Рекомендую от всей души. Мы работаем несколько месяцев, и благодаря Лилии я вышла из депрессивного эпизода, решилась на большие изменения в жизни. С ней очень легко и спокойно на сеансах.»</p>
+        <div class="review-name">София С.</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">«Вона дуже тонко відчуває, швидко розбирається в ситуації та дає дієві інструменти для виходу з кризових моментів. Щиро рекомендую тим, хто шукає справді ефективну підтримку.»</p>
+        <div class="review-name">Vasyl B.</div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">«Лілія мій перший психолог, і я дуже рада що натрапила саме на неї. Вже після двох місяців роботи я стала значно впевненішою у собі, більше розумію себе і свої бажання.»</p>
+        <div class="review-name">Маргарита Т.</div>
       </div>
     </div>
   </section>
